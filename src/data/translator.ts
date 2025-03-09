@@ -4,3 +4,8 @@ import { SheetData } from "./sheetData";
 export function toLisp(sheetData: SheetData): string {
   return `(sheet ${sheetData.cells.map(cell => `(cell ${cell.row} ${cell.col} "${cell.value}")`).join(" ")})`;
 }
+
+export function translateFormulaToScheme(formula: string): string {
+  return formula.replace(/=/g, "").replace(/ /g, "");
+}
+
