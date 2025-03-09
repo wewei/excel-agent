@@ -2,12 +2,12 @@ import { HotTable } from '@handsontable/react-wrapper';
 import 'handsontable/dist/handsontable.full.min.css';
 import { registerAllModules } from 'handsontable/registry';
 import HyperFormula from 'hyperformula';
+import { CellChange } from '../data/sheetData';
 
 registerAllModules();
 
 const initialData: string[][] = Array.from({ length: 100 }, () => Array(10).fill(''));
 
-export type CellChange = { row: number, col: number, before: string, after: string };
 export type ExcelSheetProps = {
   onChange: (changes: CellChange[]) => void;
 }
