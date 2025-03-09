@@ -17,6 +17,7 @@
     "@monaco-editor/react": "^4.7.0",
     "@mui/icons-material": "^6.4.7",
     "@mui/material": "^6.4.7",
+    "fast-formula-parser": "^1.0.19",
     "handsontable": "^15.1.0",
     "hyperformula": "^3.0.0",
     "react": "^19.0.0",
