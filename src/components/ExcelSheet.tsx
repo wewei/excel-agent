@@ -5,7 +5,7 @@ import HyperFormula from 'hyperformula';
 
 registerAllModules();
 
-const initialData: string[][] = Array.from({ length: 10 }, () => Array(10).fill(''));
+const initialData: string[][] = Array.from({ length: 100 }, () => Array(10).fill(''));
 
 export type CellChange = { row: number, col: number, before: string, after: string };
 export type ExcelSheetProps = {
@@ -30,6 +30,8 @@ export default function ExcelSheet({
       data={initialData}
       formulas={{ engine: HyperFormula }}
       stretchH="all"
+      width={"100%"}
+      height={"100%"}
       rowHeaders={true}
       colHeaders={true}
       autoWrapRow={true}
